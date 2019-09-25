@@ -8,9 +8,11 @@ jobs:
       - checkout
 
       - run:
-          name: Greeting
-          command: echo Hello, world.
+          command: echo Depoly start... 
 
       - run:
-          name: Print the Current Time
-          command: date
+          name: Depoly Over SSH
+          command: ./.circleci/deploy-master.sh
+
+      - run:
+          command: echo Depoly finish...
